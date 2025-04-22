@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL AHLAM Restraunt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
+        .container{
+            background: url(https://media.istockphoto.com/id/1081422898/photo/pan-fried-duck.jpg?s=612x612&w=0&k=20&c=kzlrX7KJivvufQx9mLd-gMiMHR6lC2cgX009k9XO6VA=);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        .logo a{
+            color: #f19205;
+            font-size: 20px;
+            text-decoration: underline;
+            
+        }
+
+        .nav{
+        
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+        }
+        .nav .nav-links{
+            display: flex;
+        }
+        .nav .nav-links li{
+            margin-right: 60px;
+        }
+        .nav .nav-links li a{
+
+
+            color: white;
+            transition: 0.3s;
+
+        }
+        .nav .nav-links li a:hover{
+            text-decoration: underline;
+         color: #ff7403;
+         
+        }
+        .social-media {
+         margin-top: 20px;
+         text-align: center; /* توسيط النص */
+        }
+
+        .social-icon {
+         margin: 0 10px; /* إضافة مسافة بين الأيقونات */
+         color: #f48e00; /* لون الأيقونات */
+         font-size: 30px; /* حجم الأيقونات */
+         transition: color 0.3s; /* تأثير عند التمرير */
+        }
+
+        .social-icon:hover {
+         color: #86a6f6; /* تغيير اللون عند التمرير */
+        }
+        #home{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        
+        
+        
+        #home .title {
+    text-align: center; /* توسيط النص */
+}
+
+
+        #home .title h1{
+            color: #ff7403;
+            text-align: center;
+            align-items: center;
+            font-size: 50px;
+            padding: 0 10px;
+            text-shadow: 0 2px 50px #ff7403;
+            margin-bottom: 20px;
+
+        }
+        #home .title p{
+            padding: 0 20px;
+            width: 70%;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: 900px;
+            color: aliceblue;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #home .title h5{
+            color: #f7f5f0;
+            padding: 0 10px;
+        }
+        #home .title a{
+            background-color: #ff7403;
+            padding: 10px 40px;
+            color: rgb(19, 19, 20);
+            border-radius: 10px;
+            transition: 0.3s;
+            margin: 10px; /* إضافة مسافة بين العناصر */
+            display: inline-block; /* التأكد من أن العنصر يتصرف ككتلة */
+        }
+        #home .title a:hover{
+            background: transparent;
+            border: 3px solid #ff7403;
+        }
+        #About h1{
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            color: #0a0701;
+            margin-top: 50px;
+
+
+        }
+        #About .p a{
+            display: inline-block;
+    background-color: #f19205;
+    color: rgb(22, 22, 22);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+        }
+        #About .p a:hover{
+            background: transparent;
+            border: 3px solid #ff7403;
+        }
+       
+        #Service .p a{
+            display: inline-block;
+    background-color: #f19205;
+    color: rgb(16, 15, 15);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+        }
+        #Service .p a:hover{
+            background: transparent;
+            border: 3px solid #ff7403;
+        }
+       
+
+        #About h1:hover{
+            text-decoration: underline;
+           color: #ff7403;
+        }
+        #About hr{
+            width: 100px;
+            height: 4px;
+            color: #f48e00;
+            background-color: #f48e00;
+            margin: auto;
+            
+        }
+        #About .Container{
+            display: flex;
+            justify-content: center;
+            margin: 100px 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+
+        }
+        #About .Container img{
+            width: 100px;
+            border-radius: 50%;
+            border: 5px solid #f48e00;
+        }
+        #About .Container .content{
+            background-color: #222222;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+        #About .Container .content:hover{
+            transform: scale(1.1);
+        }
+        #About .Container .content .title{
+            padding-left: 50px;
+        }
+        #About .Container .content .title p{
+            color: rgb(246, 244, 244);
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        #About .Container .content .title a{
+            color: rgb(238, 229, 229);
+            background-color: #f48e00;
+            padding: 5px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        #About .Container .content .title a:hover{
+            background: transparent;
+            border: 3px solid #ff7403;
+        }
+        #About .Container .content .title .now{
+            color: #f48e00;
+        }
+        #Service h2{
+            font-size: 30px;
+            padding-bottom: 10px;
+            color: #100901;
+            text-align: center;
+        }
+        #Service h2:hover{
+            text-decoration: underline;
+            color: #ff7403;
+        }
+        .Container-grid .product{
+            padding: 0 10px;
+            width: 90%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(250px,2fr));
+            flex-wrap: wrap;
+          
+            gap: 20px;
+        }
+        .Container-grid .product .grid-items{
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgb(0,0,0,0.4);
+            border-radius: 20px;
+        }
+        .Container-grid .product .grid-items .heading{
+            padding: 20px;
+        }
+        .Container-grid .product .grid-items .heading h1{
+            color: #f48e00;
+            padding-bottom: 10px;
+        }
+        .Container-grid .product .grid-items .heading p{
+            padding-bottom: 10px;
+        }
+
+        .Container-grid .product .grid-items img{
+            width: 100%;
+        }
+        .Container-grid .product .grid-items .heading a{
+            display: inline-block;
+            margin-top: 15px;
+            color: #080808;
+            background-color: #f48e00;
+            
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        .Container-grid .product .grid-items .heading a:hover{
+            background: transparent;
+            border: 3px solid #ff7403;
+        }
+
+        .Container-grid .product .grid-items:hover{
+            transform: scale(1.1);
+        }
+        .background-fixed{
+            background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(https://c4.wallpaperflare.com/wallpaper/197/854/431/fire-burger-5k-steak-wallpaper-preview.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 80vh;
+
+        }
+        
+
+        #Contact .p a{
+            display: inline-block;
+            
+    background-color: #f19205;
+    color: rgb(15, 11, 11);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+        }
+        #Contact .p a:hover{
+            background: transparent;
+            border: 3px solid #ff7403;
+
+        }
+        #Order .p a{
+            display: inline-block;
+    background-color: #f19205;
+    color: rgb(27, 3, 3);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;/
+    
+        }
+        #Order .p a:hover{
+            background: transparent;
+            border: 3px solid #ff7403;
+        }
+        #Order{
+            padding: 20px;
+        }
+        #Order h1{
+            color: #0d0d0d;
+            font-size: 25px;
+            text-align: center;
+        }
+        #Order h1:hover{
+            text-decoration: underline;
+            color: #ff7403;
+        }
+        
+        #Contact{
+            padding: 20px;
+        }
+        #Contact h1{
+            color: #0d0d0d;
+            font-size: 25px;
+            text-align: center;
+        }
+        #Contact h1:hover{
+            text-decoration: underline;
+            color: #ff7403;
+        }
+        #Contact .conect-form{
+            
+            margin-top: 20px;
+            color: #ff7403;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            width: 100%;
+    
+            
+        }
+        #Contact .conect-form .imge img{
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        #Contact .conect-form form{
+            width: 80%;
+            
+            margin-top: 10px;
+            padding: 10px;
+            
+
+        }
+        #Contact .conect-form form input,textarea{
+            width: 100%;
+            font-size: 50px;
+            outline: none;
+            margin-bottom: 10px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        textarea{
+            height: 200px;
+            padding: 20px;
+        }
+        .btn{
+            font-size: 20px;
+            cursor: pointer;
+            
+            padding: 10px 0;
+            background-color: #f48e00;
+            border: none;
+            color: #ffffff;
+            border-radius: 20px;
+            
+            
+        }
+        .btn:hover{
+            background-color: #f48e00;
+            color: #86a6f6; /* تغيير اللون عند التمرير */
+        }
+        /* تحسينات للعرض على الشاشات الصغيرة */
+    @media (max-width: 768px) {
+        .nav {
+            flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+            align-items: flex-start; /* محاذاة العناصر إلى اليسار */
+        }
+
+        .nav .nav-links {
+            flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+            margin-top: 20px; /* إضافة مسافة بين الشعار والروابط */
+        }
+
+        .title h1 {
+            font-size: 2.5rem; /* تقليل حجم الخط */
+        }
+
+        .title p {
+            font-size: 1.2rem; /* تقليل حجم الخط */
+        }
+
+        .Container img {
+            width: 80px; /* تقليل عرض الصورة */
+        }
+
+        .Container-grid {
+                  /* أعمدة مرنة للشاشات الصغيرة */
+                  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* أعمدة مرنة للشاشات الصغيرة */
+        }
+
+        .grid-items .heading h1 {
+            font-size: 1.5rem; /* تقليل حجم العنوان */
+        }
+
+        .grid-items .heading p {
+            font-size: 1rem; /* تقليل حجم الوصف */
+        }
+
+        #Contact .conect-form form {
+            width: 90%; /* عرض النموذج */
+        }
+
+        .btn {
+            font-size: 18px; /* تقليل حجم الزر */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .title h1 {
+            font-size: 2rem; /* تقليل حجم الخط أكثر */
+        }
+
+        .title p {
+            font-size: 1rem; /* تقليل حجم الخط أكثر */
+        }
+
+        .Container img {
+            width: 40px; /* تقليل عرض الصورة أكثر */
+            height: 40px;
+        }
+
+        .grid-items .heading h1 {
+            font-size: 1.2rem; /* تقليل حجم العنوان أكثر */
+        }
+
+        .grid-items .heading p {
+            font-size: 0.5rem; /* تقليل حجم الوصف أكثر */
+        }
+
+        .btn {
+            font-size: 16px; /* تقليل حجم الزر أكثر */
+        }
+    }
+    @media (max-width: 3600px) {
+        .title h1 {
+            font-size: .5rem; /* تقليل حجم الخط أكثر */
+        }
+
+        .title p {
+            font-size: .2rem; /* تقليل حجم الخط أكثر */
+        }
+
+        .Container img {
+            width: 20px; /* تقليل عرض الصورة أكثر */
+        }
+
+        .grid-items .heading h1 {
+            font-size: .9rem; /* تقليل حجم العنوان أكثر */
+        }
+
+        .grid-items .heading p {
+            font-size: 0.5rem; /* تقليل حجم الوصف أكثر */
+        }
+
+        .btn {
+            font-size: 10px; /* تقليل حجم الزر أكثر */
+        }
+    }
+    @media (max-width: 360px){
+        .title h1 {
+            font-size: .4rem; /* تقليل حجم الخط أكثر */
+        }
+
+        .title h5 {
+            font-size: .2rem; /* تقليل حجم الخط أكثر */
+        }
+
+        .Container img {
+            width: 10px; /* تقليل عرض الصورة أكثر */
+        }
+
+        .grid-items .heading h1 {
+            font-size: .6rem; /* تقليل حجم العنوان أكثر */
+        }
+
+        .grid-items .heading p {
+            font-size: 0.4rem; /* تقليل حجم الوصف أكثر */
+        }
+
+        .btn {
+            font-size: 5px; /* تقليل حجم الزر أكثر */
+        }
+    }
+    .button-container {
+    padding: 20px; /* إضافة حشوة داخلية */
+    border-radius: 0 100px; /* زوايا دائرية */
+    width: 50%; /* عرض الحاوية */
+    max-width: 600px; /* الحد الأقصى للعرض */
+    margin: auto; /* توسيط الحاوية */
+    margin-bottom: 57px; /* مسافة أسفل الحاوية */
+    text-align: center; /* توسيط النص داخل الحاوية */
+   
+   
+}
+    
+    #Order {
+    text-align: center;
+}
+
+.order-form {
+    border: solid red;
+    background: white;
+    padding: 20px;
+    border-radius: 0px 100px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom:  57px;
+    box-shadow: 12px 5px 37px #f48e00;
+}
+
+h1 {
+    color: #f19205;
+}
+
+h3 {
+    color: #f19205;
+}
+
+.form-group {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    width: 30%;
+    min-width: 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-group input, .form-group textarea {
+    width: 70%;
+    border: solid black;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 16px #f48e00;
+}
+
+.form-group textarea {
+    resize: vertical;
+    font-size: 16px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container a {
+    display: inline-block;
+    background-color: #f19205;
+    color: rgb(15, 14, 14);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button-container a:hover {
+    background: transparent;
+    border: 3px solid #ff7403;
+}
+
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-group label {
+        width: 100%;
+        text-align: right;
+        margin-bottom: 5px;
+    }
+    .form-group input, .form-group textarea {
+        width: 100%;
+    }
+    .title h1 {
+            font-size: .4rem; /* تقليل حجم الخط أكثر */
+        }
+
+        .title h5 {
+            font-size: .5rem; /* تقليل حجم الخط أكثر */
+        }
+
+        .Container img {
+            width: 10px; /* تقليل عرض الصورة أكثر */
+        }
+
+        .grid-items .heading h1 {
+            font-size: .6rem; /* تقليل حجم العنوان أكثر */
+        }
+
+        .grid-items .heading p {
+            font-size: 0.4rem; /* تقليل حجم الوصف أكثر */
+        }
+
+        .btn {
+            font-size: 5px; /* تقليل حجم الزر أكثر */
+        }
+}
+    
+       
+        
+
+
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+               <a href="#logo"><i>Food</i></a>
+
+            </div>
+            <ul class="nav-links" id="nav-links">
+               <li><a href="#Home">Home</a></li>
+               <li><a href="#About">About</a></li>
+               <li><a href="#Service">Service</a></li>
+               <li><a href="#Contact">Contact</a></li>
+               <li><a href="#Order">Order</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="قائمة الانتقال"></button>
+       </div>
+        <div id="home">
+            <div class="title">
+              <h1> Welcom To AL ahlam Restraunt Offering you the Best Food </h1>
+              <h5>We offer you the best new foods and strive for exceptional service. We pride ourselves on the high-quality service we provide to our customers. Welcome to our new restaurant, where you'll find a world of delicious food and wonderful drinks.</h5>
+              <a href="#About">about</a>
+              <a href="#Service">service</a>
+              <a href="#Contact">Contact</a>
+              <a href="#Order">order</a>
+            </div>
+        </div>
+
+    </div>
+    <div id="About">
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>About</h1>
+        
+        <div class="Container">
+            <div class="content">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw9qQMod8gBYEar3uNmcmx0qDPunV3Y7qFIg&s" alt="pizza">
+                <div class="title">
+                    <p><i>Buy Chicken</i></p>
+                    <p class="now">20%</p>
+                    <a href="#">Order</a>
+
+                </div>
+
+            </div>
+            <div class="content">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2_v6LESz2HeY3ogJSTzZfeaWc-TTnnbfMA&s" alt="pizza">
+                <div class="title">
+                    <p><i>Buy pizza</i></p>
+                    <p class="now">15%</p>
+                    <a href="#">Order</a>
+
+                </div>
+
+            </div>
+            <div class="content">
+                <img src="https://cdn.arabsstock.com/uploads/images/275898/delicious-seafood-popular-meals-and-thumbnail-275898.webp" alt="pizza">
+                <div class="title">
+                    <p><i>Buy Fish</i></p>
+                    <p class="now">50%</p>
+                    <a href="#">Order</a>
+
+                </div>
+                
+
+            </div>
+           
+        </div>
+        <div class="button-container">
+            <a href="#home">Home</a>
+        </div>
+        
+        
+    </div>
+    <div id="Service">
+        <h2>Service</h2>
+        <div class="Container-grid">
+            <div class="product">
+                <div class="grid-items">
+                    <img src="https://cdn.salla.sa/aodXX/9ZDRUOWJ818sMLUgrH6kjqEXGIfkI4l20uDkwMhC.jpg" alt="botatos">
+                    <div class="heading">
+                        <h1>Sausage</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+
+                </div>
+                <div class="grid-items">
+                    <img src="https://www.p7otoempire.com/wp-content/uploads/2021/10/%D8%B5%D9%88%D8%B1-%D9%88%D8%AC%D8%A8%D8%A7%D8%AA-%D8%B3%D8%B1%D9%8A%D8%B9%D8%A9-3.jpg" alt="botatos">
+                    <div class="heading">
+                        <h1>Potatos</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+    
+                </div>
+                <div class="grid-items">
+                    <img src="https://cdn.arabsstock.com/uploads/images/194105/western-food-in-saudi-arabia-thumbnail-194105.webp" alt="botatos">
+                    <div class="heading">
+                        <h1>Burger</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+    
+                </div>
+                <div class="grid-items">
+                    <img src="https://img-global.cpcdn.com/recipes/200852/400x400cq70/photo.jpg" alt="botatos">
+                    <div class="heading">
+                        <h1>Stuffed Chicken</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+    
+                </div>
+                <div class="grid-items">
+                    <img src="https://www.eldahan.com/foods/%D8%B1%D8%A8%D8%B9_%D8%B5%D8%AF%D8%B1_%D9%81%D8%B1%D8%AE%D9%87_%D9%85%D8%B4%D9%88%D9%8A%D9%87.jpg" alt="botatos">
+                    <div class="heading">
+                        <h1>Grilled Chicken</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <img src="https://www.kholoudabouzid.com/wp-content/uploads/2019/01/img_8213-810x810.jpg" alt="botatos">
+                    <div class="heading">
+                        <h1>Macaroni</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+    
+                </div>
+                <div class="grid-items">
+                    <img src="https://cdn.salla.sa/wWjRez/e81ecc4f-48b8-485a-a205-c1ef70b34510-1000x1000-LLTRdK24pOGBnPoW5Tcs3OjAYwANrsggGo5XeXFU.jpg" alt="botatos">
+                    <div class="heading">
+                        <h1>Spaghetti</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <img src="https://www.elsob7.com/wp-content/uploads/2024/02/Screenshot_%D9%A2%D9%A0%D9%A2%D9%A4%D9%A0%D9%A2%D9%A0%D9%A3-%D9%A1%D9%A1%D9%A0%D9%A4%D9%A0%D9%A4.jpg" alt="botatos">
+                    <div class="heading">
+                        <h1>Shawarma</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+    
+                </div>
+                <div class="grid-items">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2_v6LESz2HeY3ogJSTzZfeaWc-TTnnbfMA&s" alt="botatos">
+                    <div class="heading">
+                        <h1>Pizza</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+                </div>
+                <div class="grid-items">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcLcgpKLT1kDR2x4vk-e58E8gDNarkh1Sb4w&s" alt="botatos">
+                    <div class="heading">
+                        <h1>Kofta</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                        <a href="#">New</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            
+
+        </div>
+        <br>
+        <br>
+        <div class="button-container">
+            <a href="#home">Home</a>
+        </div>
+        
+        <br>
+        <br>
+        
+    </div>
+    <div class="background-fixed">
+        
+    </div>
+    <div id="Contact">
+        <h1>Contact</h1>
+        <div class="conect-form">
+            <h2>إدارة : أحمد رمضان </h2>
+            <h2>الهاتف : 01091889366</h2>
+            
+
+        </div>
+        <div class="social-media">
+            
+            <a href="https://www.facebook.com/share/1APTp6Fs97/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/qr/NDCARXYPZ5FSP1" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/eng_a7med_ra?igsh=azE4eGVrZHZheW9w" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+          
+        </div>
+        
+        
+        <div class="button-container">
+            <a href="#home">Home</a>
+        </div>
+        
+
+    </div>
+    <br>
+    <br>
+    <div id="Order">
+        <h1>Order</h1>
+        <br>
+        <br>
+        <div class="order-form">
+            <h3>طلب وجبة جديدة</h3>
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="username">اسم المستخدم</label>
+                <input type="text" id="username" placeholder="اسم المستخدم">
+            </div>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="text" id="phone" placeholder="رقم الهاتف">
+            </div>
+            <div class="form-group">
+                <label for="address">العنوان</label>
+                <input type="text" id="address" placeholder="العنوان">
+            </div>
+            <div class="form-group">
+                <label for="order-details">تفاصيل الطلب</label>
+                <textarea id="order-details" placeholder="تفاصيل الطلب" rows="4"></textarea>
+            </div>
+            <div class="p">
+                <a href="https://wa.me/qr/NDCARXYPZ5FSP1">طلب الاوردر</a>
+            </div>
+        </div>
+        <div class="p">
+            <a href="#home">Home</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script>
+        const navtoggle = document.getElementById("nav-toggle")
+        const navlinks = document.getElementById("nav-links")
+        navtoggle.addEventListener("click",() =>{
+            navlinks .classList.toggle("active")
+        })
+    </script>
+
+</body>
+</html>
